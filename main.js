@@ -37,3 +37,17 @@ function playRound(playerSelection) {
 		return "lose";
 	}
 }
+
+function playGame(playerSelection) {
+	let userScore = 0;
+	let computerScore = 0;
+	while (userScore + computerScore < 5) {
+		let winner = playRound(playerSelection);
+		if (winner === "win") {
+			userScore += 1;
+		} else if (winner === "lose") {
+			computerScore += 1;
+		}
+		console.log(`${userScore} ${computerScore}`);
+	}
+}
