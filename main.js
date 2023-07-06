@@ -8,3 +8,18 @@ function getComputerChoice() {
 		return "scissors";
 	}
 }
+
+function playGame(playerSelection, computerSelection) {
+	playerSelection = playerSelection.toLowerCase();
+	if (playerSelection === computerSelection) {
+		return "tie";
+	} else if (
+		(playerSelection === "rock" && computerSelection === "scissors") ||
+		(playerSelection === "paper" && computerSelection === "rock") ||
+		(playerSelection === "scissors" && computerSelection === "paper")
+	) {
+		return "win";
+	} else {
+		return "lose";
+	}
+}
