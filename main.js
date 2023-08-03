@@ -25,10 +25,11 @@ function playGame(playerSelection, computerSelection) {
 }
 
 function game() {
+	const score = [0, 0];
 	for (let i = 0; i < 5; i++) {
 		const playerSelection = prompt("Rock, paper, scissors?");
 		const computerSelection = getComputerChoice();
-		const score = [0, 0];
+
 		let result = playGame(playerSelection, computerSelection);
 		if (result === "tie") {
 			console.log(
